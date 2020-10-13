@@ -1,6 +1,7 @@
 # socket.io-simple-chat
 
 A minimal live chat app made with [socket.io](https://socket.io)
+
 Live demo: https://socketio-chat.theprogrammer3.repl.co/
 
 ## Running
