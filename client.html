@@ -1,0 +1,13 @@
+<input type="text" id="msg-input" placeholder="Type your message..."/>
+<input type="button" id="submit-btn" value="Send"/>
+<div id="messages"></div>
+<script src="/socket.io/socket.io.js"></script>
+<script type="application/javascript">
+	const socket = io();
+	document.getElementById('submit-btn').onclick = function(event) {
+		socket.emit('message', document.getElementById('msg-input').value);
+	};
+	socket.on('message',function(data) {
+		document.getElementById('messages').innerText += data+'\n';
+	});
+</script>
