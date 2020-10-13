@@ -2,6 +2,8 @@
 
 A minimal live chat app made with [socket.io](https://socket.io)
 
+Live demo: https://socketio-chat.theprogrammer3.repl.co/
+
 ## Running
 
 Make sure you have Express and Socket.io installed:
