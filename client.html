@@ -3,13 +3,13 @@
 <div id="messages"></div>
 <script src="/socket.io/socket.io.js"></script>
 <script type="application/javascript">
-	const socket = io();
-	const messageInput = document.getElementById('msg-input');
-	document.getElementById('submit-btn').onclick = function(event) {
-		socket.emit('message', messageInput.value);
-		messageInput.value = '';
-	};
-	socket.on('message',function(data) {
-		document.getElementById('messages').innerText += data+'\n';
-	});
+  const socket = io();
+  const messageInput = document.getElementById('msg-input');
+  document.getElementById('submit-btn').onclick = function(event) {
+    socket.emit('message', messageInput.value);
+    messageInput.value = '';
+  };
+  socket.on('message',function(data) {
+    document.getElementById('messages').innerText += data+'\n';
+  });
 </script>
